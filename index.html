@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Adicione esses links no cabeçalho do seu HTML -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+
+
+    <style>
+        body {
+            font-family: 'Ubuntu', 'Roboto';
+            margin: 0;
+            padding: 0;
+            color: #333;
+            padding: 0 60px;
+            background-color: #eeeef5;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding-left: 20px;
+            /* Adiciona margem à esquerda */
+            padding-right: 20px;
+            /* Adiciona margem à direita */
+        }
+
+        header {
+            background-color: #4060d7;
+            /* background-color: #3a4788; */
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00ced1;
+        }
+
+        section {
+            padding: 50px 0;
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+
+
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+            color: #00ced1;
+            text-shadow: 0px 1px 2px #000000b0;
+        }
+
+        footer {
+            background-color: #4e4e4ee7;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        #hero {
+            background-color: rgba(0, 0, 0, 0.836);
+            text-align: center;
+            background-image: url('imgs\\fundo_landing.png');
+        }
+
+        #sobre {
+            background-color: #9995;
+            padding-bottom: 80px;
+        }
+
+        #conhecimento {
+            background-color: #9993;
+            padding-bottom: 80px;
+
+        }
+
+        #portfolio {
+            background-color: #4060d7
+        }
+
+        #feedback {
+            background-color: rgba(199, 255, 199, 0.884);
+
+        }
+
+        .hero-content {
+            padding: 5px 0px;
+        }
+
+        .hero-content img {
+            border-radius: 50%;
+            max-width: 200px;
+            margin-bottom: 1px;
+            /* border: 4px solid #3a4788; */
+            border: 4px solid #4060d7;
+            transition: border-color 0.3s;
+        }
+
+        .hero-content img:hover {
+            border-color: #00ced1;
+        }
+
+        .hero-content h2 {
+            margin: 0;
+        }
+
+        #hero-p {
+            color: #bebebe;
+
+        }
+
+        #portfolio-p {
+            color: #ffffff;
+
+        }
+
+        #footer-p {
+            color: #00ced1;
+        }
+
+        p {
+            font-size: large;
+            color: #555555;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin-right: 20px;
+            color: #000000;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00ced1;
+        }
+
+        .social-icons img {
+            width: 35px;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.2);
+            background-color: #00ced1;
+            border-radius: 15%;
+            /* max-width: 200px; */
+            /* margin-bottom: 1px; */
+            /* border: 1px solid #00ced1; */
+            transition: border-color 0.3s;
+        }
+
+
+        .tool-icon-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .tool-icon {
+            width: 70px;
+            /* Defina o tamanho desejado para as imagens */
+            height: auto;
+            /* Manter a proporção da imagem */
+            margin-right: 30px;
+            margin-bottom: 20px;
+            /* Adicione um espaçamento entre as imagens */
+            transition: transform 0.3s;
+            /* Adiciona uma transição suave */
+            align-items: center;
+        }
+
+        .tool-icon:hover {
+            transform: scale(1.1);
+            /* Aumenta ligeiramente o tamanho da imagem */
+
+        }
+
+        .card {
+            display: inline-block;
+            flex-direction: column;
+            border: 1px solid #bbbbbb;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 8px rgb(0, 0, 0);
+            margin: 0 10px 20px;
+            /* Espaçamento entre os cards */
+            margin-bottom: 20px;
+            width: 220px;
+            height: 350px;
+            transition: box-shadow 0.3s;
+            transition: transform 0.3s;
+            /* Transição suave para o box-shadow */
+            background-color: #f8f8f8;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 15px #000000;
+            /* Altera o box-shadow ao passar o mouse */
+            transform: scale(1.02);
+        }
+
+        .card-image {
+            width: 100%;
+            height: auto;
+            background-color: #acacac;
+            /* Cor de fundo cinza */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-image img {
+            width: 60%;
+            height: 60%;
+            border-radius: 3px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #555555;
+        }
+
+        .card-date {
+            font-size: 12px;
+            color: #252525a6;
+        }
+
+        /* Estilo para o card de feedback */
+        .feedback-card {
+            display: inline-block;
+            width: 100px;
+            height: 210px;
+            /* padding: 20px; */
+            margin-top: 60px;
+            margin-left: 250px;
+            margin-right: 250px;
+            margin-bottom: 50px;
+            border-radius: 10px;
+            background-color: rgba(252, 252, 252, 0.829);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.76);
+            text-align: center;
+        }
+
+        /* Estilo para o texto do feedback */
+        .feedback-text {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para o nome do cliente */
+        .client-name {
+            font-size: 15px;
+            font-style: italic;
+            color: #888;
+        }
+
+        .feedback-card img {
+
+            width: 70px;
+            /* Ajuste conforme necessário */
+            border-radius: 50%;
+            margin-bottom: 10px;
+            padding: 2%;
+            margin-left: 200px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <!-- <h1>Edson Monteiro</h1> -->
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#conhecimento">Conhecimentos</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="imgs\ed.jpg" alt="Sua Foto">
+            </div>
+            <h2>Edson Monteiro <br> Desenvolvedor</h2>
+            <p id="hero-p">Bem-vindo à minha página!</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/edson-monteiro-loiola-41b692149/" target="_blank"><img
+                        src="imgs\linkedin_c.png" alt="LinkedIn" /></a>
+                <a href="https://github.com/Edson-Loiola" target="_blank"><img src="imgs\github_c.png"
+                        alt="GitHub" /></a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Sou um Analista Desenvolvedor com três anos de experiência no mercado. <br><br>
+                Me formei em Análise e Desenvolvimento de Sistemas pela Universidade Cruzeiro do Sul e <br>
+                desde então trabalho com projetos desafiadores envolvendo integração de APIs e automações.
+
+            <p>Tenho 31 anos, sou casado com a Kamilla há 8 anos e recentemente fomos abençoados com a <br>
+                chegada do nosso filho, que já tem 22 dias de pura alegria! </p>
+        </div>
+    </section>
+
+    <section id="conhecimento">
+        <div class="container">
+            <h2>Conhecimentos</h2>
+            <p>Aqui está uma amostra dos conhecimentos que tenho adquirido até o momento...</p><br><br><br>
+            <div class="tool-icons">
+                <img class="tool-icon" src="imgs\visual-studio.png" alt="Visual Studio" title="Visual Studio">
+                <img class="tool-icon" src="imgs\csharp.png" alt="c#" title="C#">
+                <img class="tool-icon" src="imgs\python.png" alt="Python" title="Python">
+                <img class="tool-icon" src="imgs\html-5.png" alt="html" title="HTML-5">
+                <img class="tool-icon" src="imgs\css-3.png" alt="css" title="CSS-3">
+                <img class="tool-icon" src="imgs\vuejs.png" alt="vuejs" title="Vue.js">
+                <img class="tool-icon" src="imgs\sql.png" alt="sql" title="SQL">
+                <img class="tool-icon" src="imgs\api.png" alt="API" title="APIs">
+                <img class="tool-icon" src="imgs\planilhas.png" alt="sql" title="Planilhas">
+
+                <!-- Adicione outras imagens aqui -->
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfólio</h2>
+            <p id="portfolio-p">Aqui estão alguns dos projetos que realizei até o momento.</p><br><br><br>
+            <div class="col-12">
+
+                <!-- card 1 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="imgs/geren_pizzaria.jpeg" alt="Imagem do Projeto">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Sistema para Pizzaria</h3>
+                        <p class="card-description">Projeto de conclusão de Curso desenvolvido durante o perído da
+                            faculdade. O sistema tem como foco a parte de gestão de uma Pizzaria.</p>
+                        <p class="card-date">Data: Dezembro de 2021</p>
+                    </div>
+                </div>
+                <!-- card 1 -->
+
+                <!-- card 2 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="imgs/automacao1.png" alt="Imagem do Projeto">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Lembrete de Aniversário</h3>
+                        <p class="card-description">Automação em AppScript para consultar uma lista no
+                            Sheets
+                            e enviar emails e agendar lembretes no calendário dos interessados.</p>
+                        <p class="card-date">Data: Janeiro de 2023</p>
+                    </div>
+                </div>
+                <!-- card 2 -->
+
+                <!-- card 3 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="imgs/automacao2.png" alt="Imagem do Projeto">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Slides Para Músicas</h3>
+                        <p class="card-description">Automação em AppScript para gerar slides com as letras de
+                            uma música, prontos para serem exibidos em um projetor.</p>
+                        <p class="card-date">Data: Fevereiro de 2023</p>
+                    </div>
+                </div>
+                <!-- card 3 -->
+
+                <!-- card 4 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="imgs/landing-page.png" alt="Imagem do Projeto">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Landing Page</h3>
+                        <p class="card-description">Criador dessa Landing Page hospedada no GitHub.</p>
+                        <p class="card-date">Data: Abril de 2024</p>
+                    </div>
+                </div>
+                <!-- card 4 -->
+
+                <!-- card 5 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="imgs/projeto.png" alt="Imagem do Projeto">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Título do Projeto</h3>
+                        <p class="card-description">Descrição do projeto...</p>
+                        <p class="card-date">Data: Abril de 2024</p>
+                    </div>
+                </div>
+                <!-- card 5 -->
+
+                <!-- card 6 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="imgs/projeto.png" alt="Imagem do Projeto">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Título do Projeto</h3>
+                        <p class="card-description">Descrição do projeto...</p>
+                        <p class="card-date">Data: Abril de 2024</p>
+                    </div>
+                </div>
+                <!-- card 6 -->
+
+                <!-- card 7 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="imgs/projeto.png" alt="Imagem do Projeto">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Título do Projeto</h3>
+                        <p class="card-description">Descrição do projeto...</p>
+                        <p class="card-date">Data: Abril de 2024</p>
+                    </div>
+                </div>
+                <!-- card 7 -->
+
+                <!-- card 8 -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="imgs/projeto.png" alt="Imagem do Projeto">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Título do Projeto</h3>
+                        <p class="card-description">Descrição do projeto...</p>
+                        <p class="card-date">Data: Abril de 2024</p>
+                    </div>
+                </div>
+                <!-- card 8 -->
+            </div>
+        </div>
+    </section>
+
+    <section id="feedback">
+        <div class="container">
+            <h2>Feedbacks</h2>
+            <div class="feedback-carousel">
+
+                <div class="feedback-card">
+                    <img src="imgs/projeto.png" alt="Foto do Cliente 1">
+                    <p class="client-name">Cliente 1</p>
+                    <p class="feedback-text">"descrição..."
+                    </p>
+                </div>
+
+                <div class="feedback-card">
+                    <img src="imgs/projeto.png" alt="Foto do Cliente 2">
+                    <p class="client-name">Cliente 2</p>
+                    <p class="feedback-text">"descrição..."</p>
+                    </p>
+                </div>
+
+                <div class="feedback-card">
+                    <img src="imgs/projeto.png" alt="Foto do Cliente 3">
+                    <p class="client-name">Cliente 3</p>
+                    <p class="feedback-text">"descrição..."</p>
+                </div>
+
+                <div class="feedback-card">
+                    <img src="imgs/automacao1.png" alt="Foto do Cliente 4">
+                    <p class="client-name">Cliente 4</p>
+                    <p class="feedback-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit"</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <p id="footer-p">Entre em contato comigo através do email: Edson.Monteiro.L@gmail.com</p>
+            <div class="social-icons">
+                <h2>Siga-me</h2>
+                <a href="" target="_blank"><img src="imgs/whatsapp.png" alt="whatsapp" /></a>
+                <a href="" target="_blank"><img src="imgs/twitter.png" alt="twitter" /></a>
+                <a href="" target="_blank"><img src="imgs/x.png" alt="x" /></a>
+                <a href="" target="_blank"><img src="imgs/instagram.png" alt="insta" /></a>
+                <a href="" target="_blank"><img src="imgs/youtube.png" alt="WhatsApp" /></a>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Adicione esse script antes de fechar a tag </body> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.feedback-carousel').slick({
+                dots: true, // Mostra os pontos de navegação
+                arrows: false, // Oculta as setas de navegação
+                autoplay: true, // Inicia a reprodução automática
+                autoplaySpeed: 3000 // Tempo de transição entre os slides (em milissegundos)
+            });
+        });
+    </script>
+
+</body>
+
+</html>

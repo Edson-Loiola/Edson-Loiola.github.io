@@ -320,6 +320,69 @@
 
 
         }
+
+
+        /***** Responsividade ******/
+        @media (max-width: 768px) {
+            body {
+                padding: 0 20px;
+                /* Reduzir o preenchimento nas laterais */
+            }
+
+            .container {
+                width: 100%;
+                /* A largura total para ocupar toda a largura da tela */
+            }
+
+            /* Redefinir estilos de cabeçalho */
+            header {
+                padding: 10px 0;
+                /* Reduzir o preenchimento do cabeçalho */
+            }
+
+            /* Redefinir estilos de navegação */
+            nav ul li {
+                display: block;
+                /* Alterar a exibição para blocos para empilhar verticalmente */
+                margin-right: 0;
+                /* Remover margem direita para alinhamento adequado */
+                margin-bottom: 10px;
+                /* Adicionar espaço entre os itens */
+            }
+
+            /* Redefinir estilos de herói */
+            .hero-content img {
+                max-width: 150px;
+                /* Reduzir o tamanho da imagem */
+            }
+
+            /* Redefinir estilos de seções */
+            section {
+                padding: 30px 0;
+                /* Reduzir o preenchimento superior e inferior */
+            }
+
+            /* Redefinir estilos de feedback-card */
+            .feedback-card {
+                width: 80%;
+                /* Reduzir a largura do cartão */
+                margin: 20px auto;
+                /* Centralizar horizontalmente e adicionar margem superior e inferior */
+                margin-left: 0;
+                /* Remover margem esquerda para centralizar */
+                margin-right: 0;
+                /* Remover margem direita para centralizar */
+            }
+
+            .feedback-card img {
+                width: 50px;
+                /* Reduzir o tamanho da imagem */
+            }
+
+            p {
+                font-size: small;
+            }
+        }
     </style>
 </head>
 
@@ -506,7 +569,7 @@
         </div>
     </section>
 
-    <!-- <section id="feedback">
+    <section id="feedback">
         <div class="container">
             <h2>Feedbacks</h2>
             <div class="feedback-carousel">
@@ -514,7 +577,7 @@
                 <div class="feedback-card">
                     <img src="imgs/projeto.png" alt="Foto do Cliente 1">
                     <p class="client-name">Cliente 1</p>
-                    <p class="feedback-text">"descrição..."
+                    <p class="feedback-text">"O projeto ficou muito bom e tem me ajudado muito no dia a dia. Obrigado!"
                     </p>
                 </div>
 
@@ -539,7 +602,7 @@
             </div>
         </div>
 
-    </section> -->
+    </section>
 
 
     <footer id="contato">

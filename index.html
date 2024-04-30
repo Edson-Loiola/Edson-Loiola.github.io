@@ -385,9 +385,27 @@
                 /* Reduzir o preenchimento superior e inferior */
             }
 
+            .card {
+                display: inline-block;
+                flex-direction: column;
+                border: 1px solid #bbbbbb;
+                border-radius: 5px;
+                overflow: hidden;
+                box-shadow: 0 5px 8px rgb(0, 0, 0);
+                margin: 0 100px 0px;
+                /* Espaçamento entre os cards */
+                margin-bottom: 20px;
+                width: 200px;
+                height: 330px;
+                transition: box-shadow 0.3s;
+                transition: transform 0.3s;
+                /* Transição suave para o box-shadow */
+                background-color: #f8f8f8;
+            }
+
             /* Redefinir estilos de feedback-card */
             .feedback-card {
-                width: 80%;
+                width: 50%;
                 /* Reduzir a largura do cartão */
                 margin: 20px auto;
                 /* Centralizar horizontalmente e adicionar margem superior e inferior */

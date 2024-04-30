@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Landing Page</title>
+    <title>Portfólio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -408,6 +408,61 @@
                 width: auto;
             }
         }
+
+        /* Estilo para o menu principal */
+        .menu {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-right: 20px;
+        }
+
+        /* Estilo para o ícone de hambúrguer */
+        .hamburguer-menu {
+            display: none;
+            cursor: pointer;
+        }
+
+        .line {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+        }
+
+
+        /* Estilo para o menu expandido em dispositivos móveis */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .menu {
+                flex-direction: column;
+                background-color: #4060d7;
+                padding: 10px;
+                width: 80%;
+                display: none;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .menu li {
+                margin: 10px 0;
+            }
+
+            .hamburguer-menu {
+                display: block;
+            }
+        }
     </style>
 </head>
 
@@ -416,7 +471,12 @@
         <div class="container">
             <!-- <h1>Edson Monteiro</h1> -->
             <nav>
-                <ul>
+                <div class="hamburguer-menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <ul class="menu">
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#conhecimento">Conhecimentos</a></li>
                     <li><a href="#portfolio">Portfólio</a></li>
@@ -662,6 +722,13 @@
                 arrows: false, // Oculta as setas de navegação
                 autoplay: true, // Inicia a reprodução automática
                 autoplaySpeed: 3000 // Tempo de transição entre os slides (em milissegundos)
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.hamburguer-menu').click(function () {
+                $('.menu').toggleClass('active');
             });
         });
     </script>

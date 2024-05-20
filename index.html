@@ -29,7 +29,7 @@
             margin: 0;
             padding: 0;
             color: #333;
-            padding: 0 60px;
+            padding: 0 0px;
             background-color: #eeeef5;
         }
 
@@ -85,6 +85,12 @@
             text-shadow: 0px 1px 2px #000000b0;
         }
 
+        section h1 {
+            margin-bottom: 50px;
+            color: #00ced1;
+            text-shadow: 0px 1px 2px #000000b0;
+        }
+
         footer {
             background-color: #4e4e4ee7;
             color: #fff;
@@ -105,7 +111,7 @@
         }
 
         #sobre {
-            background-color: #9995;
+            background-color: #f2f2f2;
             padding-bottom: 150px;
         }
 
@@ -114,9 +120,32 @@
         }
 
         #conhecimento {
-            background-color: #9993;
+            background-color: rgba(255, 255, 255, 0.562);
             padding-bottom: 150px;
 
+        }
+
+        .blockquote {
+            position: relative;
+            /* font-style: italic; */
+            padding-left: 40px;
+            /* Espaçamento para a aspa */
+            color: #555555;
+            font-size: large;
+        }
+
+        .blockquote::before {
+            content: '“';
+            /* Caractere de aspa */
+            font-family: Georgia, serif;
+            position: absolute;
+            left: 0;
+            top: -17px;
+            /* Ajuste para alinhar verticalmente */
+            font-size: 90px;
+            /* Tamanho da aspa */
+            color: #ccc;
+            /* Cor da aspa */
         }
 
         #portfolio {
@@ -141,6 +170,7 @@
             /* border: 4px solid #3a4788; */
             border: 4px solid #4060d7;
             transition: border-color 0.3s;
+
         }
 
         .hero-content img:hover {
@@ -168,6 +198,11 @@
         p {
             font-size: large;
             color: #555555;
+        }
+
+        #p-sobre {
+            font-size: 21px;
+            color: #777777;
         }
 
         .social-icons {
@@ -255,7 +290,7 @@
         .card-image {
             width: 100%;
             height: auto;
-            background-color: #acacac;
+            background-color: #d6d6d6;
             /* Cor de fundo cinza */
             display: flex;
             align-items: center;
@@ -559,20 +594,24 @@
 
     <section id="sobre">
         <div class="container">
-            <h2>Sobre</h2>
-            <p>Olá! Sou um Analista Desenvolvedor com três anos de experiência no mercado. <br><br>
+            <h1>Sobre</h1>
+            <p class="blockquote" id="p-sobre">Olá! Sou um Analista Desenvolvedor com três anos de experiência no
+                mercado. <br><br>
                 Me formei em Análise e Desenvolvimento de Sistemas pela Universidade Cruzeiro do Sul e <br>
                 desde então trabalho com projetos desafiadores envolvendo integração de APIs e automações.
 
-            <p>Tenho 31 anos, sou casado com a Kamilla há 8 anos e recentemente fomos abençoados com a <br>
-                chegada do nosso filho. </p>
+                <br><br>
+                Tenho 31 anos, sou casado com a Kamilla há 8 anos e recentemente fomos
+                abençoados com a <br>
+                chegada do nosso filho.
+            </p>
         </div>
     </section>
 
     <section id="conhecimento">
         <div class="container">
             <h2>Conhecimentos</h2>
-            <p>Aqui está uma amostra dos conhecimentos que tenho adquirido até o momento...</p><br><br><br>
+            <p id="p-sobre">Aqui está uma amostra dos conhecimentos que tenho adquirido até o momento...</p><br><br><br>
             <div class="tool-icons">
                 <img class="tool-icon" src="imgs\visual-studio.png" alt="Visual Studio" title="Visual Studio">
                 <img class="tool-icon" src="imgs\csharp.png" alt="c#" title="C#">
@@ -652,7 +691,7 @@
                 <!-- card 4 -->
 
                 <!-- card 5 -->
-                <div class="card">
+                <!-- <div class="card">
                     <div class="card-image">
                         <img src="imgs/projeto.png" alt="Imagem do Projeto">
                     </div>
@@ -661,11 +700,11 @@
                         <p class="card-description">Descrição do projeto...</p>
                         <p class="card-date">Data: Abril de 2024</p>
                     </div>
-                </div>
+                </div> -->
                 <!-- card 5 -->
 
                 <!-- card 6 -->
-                <div class="card">
+                <!-- <div class="card">
                     <div class="card-image">
                         <img src="imgs/projeto.png" alt="Imagem do Projeto">
                     </div>
@@ -674,11 +713,11 @@
                         <p class="card-description">Descrição do projeto...</p>
                         <p class="card-date">Data: Abril de 2024</p>
                     </div>
-                </div>
+                </div> -->
                 <!-- card 6 -->
 
                 <!-- card 7 -->
-                <div class="card">
+                <!-- <div class="card">
                     <div class="card-image">
                         <img src="imgs/projeto.png" alt="Imagem do Projeto">
                     </div>
@@ -687,11 +726,11 @@
                         <p class="card-description">Descrição do projeto...</p>
                         <p class="card-date">Data: Abril de 2024</p>
                     </div>
-                </div>
+                </div> -->
                 <!-- card 7 -->
 
                 <!-- card 8 -->
-                <div class="card">
+                <!-- <div class="card">
                     <div class="card-image">
                         <img src="imgs/projeto.png" alt="Imagem do Projeto">
                     </div>
@@ -700,7 +739,7 @@
                         <p class="card-description">Descrição do projeto...</p>
                         <p class="card-date">Data: Abril de 2024</p>
                     </div>
-                </div>
+                </div> -->
                 <!-- card 8 -->
             </div>
         </div>
